@@ -12,20 +12,16 @@ License URI: http://opensource.org/licenses/MIT
 Domain Path: /languages
 Text Domain: ctala-text_domain
 */
-
+include_once 'helpers/debug.php';
 // Register Navigation Menus
-function custom_navigation_menus() {
 
-	$locations = array(
-		'Herramientas' => __( 'Herramientas Básicas', 'ctala-text_domain' ),
-		'Configuración' => __( 'Configurar el plugin', 'ctala-text_domain' ),
-	);
-	register_nav_menus( $locations );
-
+function ctala_setup_admin_menu() {
+    add_menu_page('CTala', 'CTala', 'manage_options', 'ctala', 'ctala_view_admin');
+    add_submenu_page('ctala', 'SubMen', 'Admin Page', 'manage_options', 'myplugin-top-level-admin-menu', 'myplugin_admin_page');
 }
 
-// Hook into the 'init' action
-add_action( 'init', 'custom_navigation_menus' );
-
+function ctala_view_admin() {
+    include_once 'views/admin/viewAdmin.php';
+}
 
 ?>
