@@ -13,7 +13,9 @@ Domain Path: /languages
 Text Domain: ctala-text_domain
 */
 include_once 'helpers/debug.php';
-// Register Navigation Menus
+
+
+// Registramos los menus correspondientes
 
 function ctala_setup_admin_menu() {
     add_menu_page('CTala', 'CTala', 'manage_options', 'ctala', 'ctala_view_admin');
@@ -24,4 +26,5 @@ function ctala_view_admin() {
     include_once 'views/admin/viewAdmin.php';
 }
 
+add_action('admin_menu', 'ctala_setup_admin_menu');
 ?>
