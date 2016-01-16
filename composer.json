@@ -1,4 +1,12 @@
 {
-    "require": {
-    }
+    "name": "ctala/wp-skeleton",
+    "description": "Esqueleto para el desarrollo de plugins de wordpress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Tala S.",
+            "email": "cristian.tala@gmail.com"
+        }
+    ],
+    "require": {}
 }
