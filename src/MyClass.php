@@ -29,7 +29,7 @@ class MyClass {
 
             // Then we apply our replaces for within those templates.
             echo "applying variables to $target...\n";
-            $this->applyValues($target, $replaces);
+            applyValues($target, $replaces);
         }
 
 
@@ -47,7 +47,7 @@ class MyClass {
      * @param string $target the filename of the target
      * @param array $replaces the replaces to be applied to this target
      */
-    function applyValues($target, $replaces) {
+    public static function applyValues($target, $replaces) {
         file_put_contents(
                 $target, strtr(
                         file_get_contents($target), $replaces
