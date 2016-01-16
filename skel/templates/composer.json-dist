@@ -1,6 +1,6 @@
 {
-    "name": "ctala/{{ projectname }}",
-    "description": "AQUI LA DESCRIPCION",
+    "name": "{{ projectname }}",
+    "description": "DESCRIPCION A DEFINIR",
     "license": "MIT",
     "authors": [
         {
@@ -10,7 +10,6 @@
     ],
     "require": {
         "php": ">=5.4.0"
-    }
-    
-}
+    },
 
+}

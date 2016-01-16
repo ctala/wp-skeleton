@@ -29,15 +29,19 @@ class MyClass {
 
             // Then we apply our replaces for within those templates.
             echo "applying variables to $target...\n";
-            applyValues($target, $replaces);
+            MyClass::applyValues($target, $replaces);
         }
 
-
+        MyClass::renamePlugin($projectname);
         echo "\033[0;32mdist script done...\n";
     }
 
     public static function test() {
         echo "HOLA\n";
+    }
+
+    public static function renamePlugin($name) {
+        \rename("Plugin.php", $name . ".php");
     }
 
     /**
