@@ -8,5 +8,12 @@
             "email": "cristian.tala@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "skel/post_create_project.php"
+        ]
+    }
 }

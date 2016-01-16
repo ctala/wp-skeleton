@@ -1,0 +1,16 @@
+{
+    "name": "ctala/{{ projectname }}",
+    "description": "AQUI LA DESCRIPCION",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Tala S.",
+            "email": "cristian.tala@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    }
+    
+}
+
