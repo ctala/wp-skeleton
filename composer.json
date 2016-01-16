@@ -11,9 +11,13 @@
     "require": {
         "php": ">=5.4.0"
     },
+    "autoload": {
+        "psr-4": {
+            "MyVendor\\": "src/"
+        }
+    },
     "scripts": {
-        "post-create-project-cmd": [
-            "skel/post_create_project.php"
-        ]
+        "post-create-project-cmd": "MyVendor\\MyClass::postInstall"
+
     }
 }
