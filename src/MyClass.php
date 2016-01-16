@@ -22,14 +22,14 @@ class MyClass {
 
             $target = substr($distfile, 15, -5);
 
-            // First we copy the dist file to its new location,
-            // overwriting files we might already have there.
+            // Se copia el archivo,
+            // Se sobreescriben los archivos que ya existían..
             echo "creating clean file ($target) from dist ($distfile)...\n";
             copy($distfile, $target);
 
             // Then we apply our replaces for within those templates.
             echo "applying variables to $target...\n";
-            applyValues($target, $replaces);
+            $this->applyValues($target, $replaces);
         }
 
 
