@@ -5,11 +5,16 @@
     "authors": [
         {
             "name": "Cristian Tala S.",
-            "email": "cristian.tala@gmail.com"
+            "email": "yomismo@cristiantala.cl"
         }
     ],
     "require": {
         "php": ">=5.4.0"
     },
+    "autoload": {
+        "psr-4": {
+            "{{ projectname }}\\classes\\": "classes/",
+            "{{ projectname }}\\helpers\\": "helpers/"
+        }
 
 }

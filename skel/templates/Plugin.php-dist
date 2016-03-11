@@ -1,5 +1,7 @@
 <?php
 
+namespace {{ projectname }};
+
 /*
 Plugin Name: {{ projectname }}
 Plugin URI:  https://github.com/ctala/{{ projectname }}
@@ -12,7 +14,9 @@ License URI: http://opensource.org/licenses/MIT
 Domain Path: /languages
 Text Domain: ctala-text_domain
 */
-include_once 'helpers/debug.php';
+//include_once 'helpers/debug.php';
+include_once 'vendor/autoload.php';
+use {{ projectname }}\classes\Logger;
 
 
 // Registramos los menus correspondientes
