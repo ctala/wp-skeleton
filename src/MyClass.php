@@ -32,6 +32,12 @@ class MyClass {
             MyClass::applyValues($target, $replaces);
         }
 
+        foreach (glob("classes//{,.}*php", GLOB_BRACE) as $distfile) {
+
+            echo "applying variables to $distfile...\n";
+            MyClass::applyValues($distfile, $replaces);
+        }
+
         MyClass::renamePlugin($projectname);
         echo "\033[0;32mdist script done...\n";
     }
